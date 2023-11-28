@@ -1,7 +1,6 @@
 # NewSP
 ## Introduction
-we study the new problem for continuous subgraph matching with top k density constraints(CSM-TopK for short). First of all, we are the first to propose CSM-
-TopK problem and existing CSM and static methods are notefficient in solving the CSM-TopK problem. To address this,we propose a lightweight index, called MWstar. By utilizing this index, we can efficiently prune unpromising intermediate results during the search process. Additionally, our index accelerates subgraph searches while maintaining constant-time update costs. We further incorporated a candidate space into MWstar, significantly reducing the size of search starting points for replenishing the top-k set after deletion operations. This enhancement greatly accelerates the process of subgraph searches.
+ We creatively propose a new search process, called as NewSP, where items in the model are operations instead of extensions. We incorporate innovative operation-level expansion postponement in NewSP, which could avoid premature expansions without hindering the original pruning power of the selected matching order. With expansion postponement, there could be multiple consecutive expansions in NewSP model, and we take this unique opportu- nity to design a multi-expansion strategy for further optimization. Also, in our new model, candidate set may not be expanded imme- diately once determined, which provides another unique chance for us to design cache strategies for candidate set reuse. We additionally propose adaptive index filtering over our multi-expansion and candidate reuse for performance enhancement.
 
 ## Compile
 
@@ -112,9 +111,9 @@ We provide 4 datasets in our experiment
 
 **Summary of Datasets**
 
-| **Datasets** |          **Type**           | **Vertexes** | **Edges**  |$L|(V)|$| **Average Degree** |
-| :----------: | :-------------------------: | :----------: | :--------: |:----------------:|:----------------: |
-|    Amazon    |       Product network       |   403,394    | 1,010,000  |6|      15       |
-| Livejournal  |      Community network      |  4,847,571   | 30,000,000 |30|       12.38       |
-|    Human     | Protein interaction network |    4,674     |   76,282   |44|       32.64       |
-|   Youtube    |       Social network        |  1,134,890   | 2,010,000  |25|        3.54        |
+| **Datasets** |          **Type**           | **Vertexes** | **Edges**  | **L(V)** | **Average Degree** |
+| :----------: | :-------------------------: | :----------: | :--------: |:--------:|:-----------------: |
+|    Amazon    |       Product network       |   403,394    | 1,010,000  |  6					  |      15       		 |
+| Livejournal  |      Community network      |  4,847,571   | 30,000,000 |  30				  |       12.38        |
+|    Human     | Protein interaction network |    4,674     |   76,282   |  44				  |       32.64        |
+|   Youtube    |       Social network        |  1,134,890   | 2,010,000  |  25				  |        3.54        |
