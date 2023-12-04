@@ -112,8 +112,8 @@ We provide 4 datasets in our experiment
 **Summary of Datasets**
 
 | **Datasets** |          **Type**           | **Vertexes** | **Edges**  | **L(V)** | **Average Degree** |
-| :----------: | :-------------------------: | :----------: |:----------:|:--------:|:-----------------: |
-|    Amazon    |       Product network       |   403,394    | 1,015,000  |  6					  |      15       		 |
+| :----------: | :-------------------------: | :----------: |:----------:|:--------:|:------------------:|
+|    Amazon    |       Product network       |   403,394    | 1,015,000  |  6					  |   5.03       		    |
 | Livejournal  |      Community network      |  4,847,571   | 30,005,000 |  30				  |       12.38        |
-|    Human     | Protein interaction network |    4,674     |   81,282   |  44				  |       32.64        |
-|   Youtube    |       Social network        |  1,134,890   | 2,015,000  |  25				  |        3.54        |
+|    Human     | Protein interaction network |    4,674     |   81,282   |  44				  |       34.78        |
+|   Youtube    |       Social network        |  1,134,890   | 2,015,000  |  25				  |        3.55        |
